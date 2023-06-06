@@ -1,3 +1,4 @@
+import 'package:image_zoom/providers/zoom_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
@@ -8,6 +9,6 @@ List<SingleChildWidget> providers = [
 
 /// you should add your providers here to use
 List<SingleChildWidget> independentServices = [
-
+  ListenableProvider.value(value: ZoomProvider()),
 ];
 
