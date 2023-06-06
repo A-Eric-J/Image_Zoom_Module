@@ -34,7 +34,6 @@ class ImageAndIconFill extends StatefulWidget {
 }
 
 class _ImageAndIconFillState extends State<ImageAndIconFill> {
-
   @override
   Widget build(BuildContext context) {
     final placeholderBuilder = PlaceholderBuilder.of(context);
@@ -228,10 +227,8 @@ class _StrokeState<T> extends State<Stroke<T>> {
   }
 }
 
-
 /// [NetImage] refers to network image that is a custom version of ExtendedImage that is using in [ImageAndIconFill]
 class NetImage extends StatefulWidget {
-
   final Key? networkKey;
   final String? keyCache;
   final String url;
@@ -352,7 +349,7 @@ class PlaceholderBuilder extends InheritedWidget {
     required this.builder,
     required this.errorBuilder,
     required Widget child,
-  })  : super(key: key, child: child);
+  }) : super(key: key, child: child);
 
   static PlaceholderBuilder? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<PlaceholderBuilder>();

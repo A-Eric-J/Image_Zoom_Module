@@ -3,4 +3,7 @@ class RoutePaths {
 
   /// add your another paths here
 
+  static const zoomImageScreen = '/zoomImageScreen';
+
+
 }

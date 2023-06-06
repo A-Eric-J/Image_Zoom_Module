@@ -3,8 +3,6 @@ import 'package:image_zoom/ui/shared/colors.dart';
 import 'package:image_zoom/ui/shared/text_style.dart';
 import 'package:flutter/material.dart';
 
-
-
 /// [TextView] is a custom widget of Text widget that is using in your app
 
 class TextView extends StatelessWidget {
@@ -32,7 +30,9 @@ class TextView extends StatelessWidget {
       required this.size,
       this.color,
       this.fontWeight,
-      this.hasUnderLine = false, this.direction, this.textDirection})
+      this.hasUnderLine = false,
+      this.direction,
+      this.textDirection})
       : super(key: key);
 
   @override
@@ -52,6 +52,7 @@ class TextView extends StatelessWidget {
             /// or another languages number formats you can uncomment this line bellow
             // convertEnglishNumberToPersianNumber(text) ?? '',
             text,
+
             /// you can change textDirection in whatever you want
             /// as your needs in rtl or ltr languages
             textDirection: textDirection ?? TextDirection.ltr,
@@ -70,7 +71,6 @@ class TextView extends StatelessWidget {
   }
 }
 
-
 class TextViewWithStaticSize extends StatelessWidget {
   final String text;
   final VoidCallback? onTap;
@@ -87,18 +87,18 @@ class TextViewWithStaticSize extends StatelessWidget {
 
   const TextViewWithStaticSize(
       {Key? key,
-        required this.text,
-        this.onTap,
-        this.textAlign,
-        this.overflow,
-        this.weightOfParent,
-        this.maxLine,
-        this.size = 12,
-        this.color,
-        this.fontWeight,
-        this.hasUnderLine = false,
-        this.direction,
-        this.textDirection})
+      required this.text,
+      this.onTap,
+      this.textAlign,
+      this.overflow,
+      this.weightOfParent,
+      this.maxLine,
+      this.size = 12,
+      this.color,
+      this.fontWeight,
+      this.hasUnderLine = false,
+      this.direction,
+      this.textDirection})
       : super(key: key);
 
   @override
@@ -116,14 +116,15 @@ class TextViewWithStaticSize extends StatelessWidget {
             /// or another languages number formats you can uncomment this line bellow
             // convertEnglishNumberToPersianNumber(text) ?? '',
             text,
+
             /// you can change textDirection in whatever you want
             /// as your needs in rtl or ltr languages
             textDirection: textDirection ?? TextDirection.rtl,
             style: fontWeight != null
                 ? robotoBoldStyle(size, color ?? primaryDark, fontWeight!)
                 : hasUnderLine
-                ? robotoUnderLineStyle(size, color ?? primaryDark)
-                : robotoNormalStyle(size, color ?? primaryDark),
+                    ? robotoUnderLineStyle(size, color ?? primaryDark)
+                    : robotoNormalStyle(size, color ?? primaryDark),
             textAlign: textAlign,
             overflow: overflow,
             maxLines: maxLine,

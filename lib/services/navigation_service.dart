@@ -30,7 +30,6 @@ class NavigationService {
 
   var overlays = <OverlayEntry>[];
 
-
   void closePopUp() {
     if (overlays.isNotEmpty) {
       overlays.last.remove();

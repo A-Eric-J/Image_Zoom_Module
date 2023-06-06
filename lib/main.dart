@@ -46,8 +46,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: router.Router.generateRoute,
       debugShowCheckedModeBanner: true,
       navigatorKey: locator<NavigationService>().navigatorKey,
-      home:  const MainView(),
+      home: const MainView(),
     );
   }
-
 }
